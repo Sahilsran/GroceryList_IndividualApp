@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D0FBD3"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myGroceryList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="My Grocery List"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/addItemEditText"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Enter an item..."
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/addItemButton"
+                    android:layout_width="125dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/add_item_button" />
+
+                <LinearLayout
+                    android:id="@+id/fullListLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/allContents"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Placeholder"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/listEditorButton"
+                android:layout_width="165dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/checklist_button" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
